@@ -1,0 +1,70 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card ">
+          <div class="card-header card-header-rose card-header-icon">
+            <div class="card-icon" style="background-color: #016672;">
+              <i class="material-icons">library_add</i>
+            </div>
+            <h4 class="card-title">Nuevo Contacto</h4>
+          </div>
+          <div class="card-body">
+            <form class="form" [formGroup]="form" (ngSubmit)="saveData()">
+              <div class="row">
+                <div class="col-4"> <!--Name-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Nombre del Contacto</mat-label> 
+                    <input matInput placeholder="ingresa el nombre" formControlName="names" type="text">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Name-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Cargo</mat-label> 
+                    <input matInput placeholder="ingresa el cargo" formControlName="position" type="text">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Name-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Correo electronico</mat-label> 
+                    <input matInput placeholder="ingresa un correo electronico" formControlName="email" type="text">
+                    <mat-icon matSuffix>mail</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Name-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Direccion</mat-label> 
+                    <input matInput placeholder="ingresa una direccion" formControlName="adress" type="text">
+                    <mat-icon matSuffix>position</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Name-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Telefono</mat-label> 
+                    <input matInput placeholder="ingresa un numero de telefono" formControlName="phone" type="text">
+                    <mat-icon matSuffix>position</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Name-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Pais</mat-label> 
+                    <input matInput placeholder="ingresa un numero de telefono" formControlName="country" type="text">
+                    <mat-icon matSuffix>position</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

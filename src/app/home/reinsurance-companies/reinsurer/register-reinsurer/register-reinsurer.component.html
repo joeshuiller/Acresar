@@ -1,0 +1,131 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card ">
+          <div class="card-header card-header-rose card-header-icon" >
+            <div class="card-icon" style="background-color: #016672;">
+              <i class="material-icons">edit</i>
+            </div>
+            <h4 class="card-title">Actualizar Reaseguradores</h4>
+          </div>
+          <div class="card-body">
+            <form class="form" [formGroup]="form" (ngSubmit)="saveData(form.value)">
+              <div class="row">
+                <div class="col-4"> <!--Name-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Razón Social</mat-label> 
+                    <input matInput placeholder="ingresa los nombres" formControlName="names" type="text">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Selecciona una Entidad</mat-label>
+                    <mat-select [(ngModel)]="selectedOption" formControlName="entities">
+                      <mat-option *ngFor="let item of entities" value="{{item.a}}">{{item.c}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Nombre Abreviado-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Nombre Abreviado</mat-label> 
+                    <input matInput placeholder="ingresa el nombres abreviado" formControlName="abbreviatedName"  type="text">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Nit-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Nit</mat-label> 
+                    <input matInput placeholder="ingresa el nit" formControlName="nit"  type="text">
+                    <mat-icon matSuffix> business</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div> 
+                <div class="col-4">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Selecciona un Codigo</mat-label>
+                    <mat-select [(ngModel)]="selectedOption" formControlName="cod">
+                      <mat-option *ngFor="let item of [0,1,2,3,4,5,6,7,8,9]" [value]="item">{{item}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Contac-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Contacto</mat-label> 
+                    <input matInput placeholder="ingresa un contacto" formControlName="contac"  type="text">
+                    <mat-icon matSuffix> contacts</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Direccion-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Dirección</mat-label> 
+                    <input matInput placeholder="ingresa la dirección" formControlName="adress"  type="text">
+                    <mat-icon matSuffix> location_on</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Estado-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Estado</mat-label> 
+                    <input matInput placeholder="ingresa el estado" formControlName="state"  type="text">
+                    <mat-icon matSuffix>timeline</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Pais Origen-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>País de Origen</mat-label> 
+                    <input matInput placeholder="ingresa el pais de origen" formControlName="countryOrigin"  type="text">
+                    <mat-icon matSuffix> location_on</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Calificación-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Calificacíon</mat-label> 
+                    <input matInput placeholder="ingresa una calificacion" formControlName="Qualification"  type="text">
+                    <mat-icon matSuffix>equalizer</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Region-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Región</mat-label> 
+                    <input matInput placeholder="ingresa una Region" formControlName="region"  type="text">
+                    <mat-icon matSuffix> map</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Agencia Calificadora-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Agencia Calificadora</mat-label> 
+                    <input matInput placeholder="Agencia Calificadora" formControlName="ratingAgency"  type="text">
+                    <mat-icon matSuffix >location_city</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Agencia Calificadora-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Oficina de Representación</mat-label> 
+                    <mat-select disableRipple formControlName="RepresentativeOffice">
+                      <mat-option value="1" >Si</mat-option>
+                      <mat-option value="0">No</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-12 card-footer "> <!--BOTON-->
+                  <button mat-raised-button type="submit" class="btn btn-fill btn-rose"
+                    style="background-color: #016672">Modificar Compañía</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>

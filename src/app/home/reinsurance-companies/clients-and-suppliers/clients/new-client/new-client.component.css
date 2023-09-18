@@ -1,0 +1,33 @@
+.form {
+    width: 100%;
+}
+
+.images {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.images img {
+    width: 250px;
+}
+
+.listImg {
+    width: 250px;
+}
+
+table {
+    width: 100%;
+}
+
+.centered-cell {
+    text-align: center;
+}
+
+
+.mat-option:hover {
+    background-color: #016672;
+    /* Cambia este color según tus preferencias */
+}

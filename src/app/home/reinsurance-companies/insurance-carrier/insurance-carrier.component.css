@@ -1,0 +1,29 @@
+table {
+    width: 100%;
+}
+
+
+.centered-cell {
+    text-align: center;
+}
+.centered-header{
+    text-align: center;
+}
+
+
+.mat-column-RazonSocial {
+    width: 300px;
+}
+.mat-column-Telefono {
+    width: 70px;
+}
+
+.mat-column-Contacto {
+    width: 150px;
+}
+
+.codigo-cell {
+    font-size: 12px;
+    text-align: left;
+}
+

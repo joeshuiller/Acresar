@@ -1,0 +1,55 @@
+.form {
+    width: 100%;
+}
+
+.custom-cell {
+    text-align: center;
+    border-left: 1px solid #E0E0E0;
+    border-right: 1px solid #E0E0E0;
+    padding: 3px;
+}
+
+.custom-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mat-column-corredores {
+    width: 400px;
+}
+
+.mat-column-pais {
+    width: 300px;
+}
+
+.mat-column-actualizacion {
+    width: 225px;
+}
+
+.mat-column-fecha {
+    width: 225px;
+}
+
+
+
+
+
+.images {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.images img {
+    width: 250px;
+}
+
+.listImg {
+    width: 250px;
+}
+
+table {
+    width: 100%;
+}

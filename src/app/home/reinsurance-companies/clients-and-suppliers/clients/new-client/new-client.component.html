@@ -1,0 +1,103 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card ">
+          <div class="card-header card-header-rose card-header-icon">
+            <div class="card-icon" style="background-color: #016672;">
+              <i class="material-icons">library_add</i>
+            </div>
+            <h4 class="card-title">Nuevo Cliente</h4>
+          </div>
+          <div class="card-body">
+            <form class="form" [formGroup]="form" (ngSubmit)="saveData()">
+              <div class="row">
+                <div class="col-4">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Selecciona una Entidad</mat-label>
+                    <mat-select [(ngModel)]="selectedOption" formControlName="entities">
+                      <mat-option *ngFor="let item of entities" value="{{item.a}}">{{item.c}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Name-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Razón Social</mat-label> 
+                    <input matInput placeholder="ingresa los nombres" formControlName="businessName" type="text">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Nombre Abreviado-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Nombre Abreviado</mat-label> 
+                    <input matInput placeholder="ingresa el nombres abreviado" formControlName="abbreviatedName"  type="text">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Nit-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Nit</mat-label> 
+                    <input matInput placeholder="ingresa el nit" formControlName="nit"  type="text">
+                    <mat-icon matSuffix> business</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Selecciona un Codigo</mat-label>
+                    <mat-select [(ngModel)]="selectedOption" formControlName="cod">
+                      <mat-option *ngFor="let item of [0,1,2,3,4,5,6,7,8,9]" [value]="item">{{item}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Contac-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Telfono</mat-label> 
+                    <input matInput placeholder="ingresa un numero de telefono" formControlName="phone"  type="text">
+                    <mat-icon matSuffix> phone</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Direccion-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Dirección</mat-label> 
+                    <input matInput placeholder="ingresa la dirección" formControlName="adress"  type="text">
+                    <mat-icon matSuffix> location_on</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Contac-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Contacto</mat-label> 
+                    <input matInput placeholder="ingresa un contacto" formControlName="contac"  type="text">
+                    <mat-icon matSuffix> contacts</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Name-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Selecciona un País</mat-label>
+                    <mat-select [(ngModel)]="selectedOption" formControlName="countryOrigin">
+                      <mat-option *ngFor="let item of countries" value="{{item.a}}">{{item.c}}</mat-option>
+                    </mat-select>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--Region-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Región</mat-label> 
+                    <input matInput placeholder="ingresa una Region" formControlName="region"  type="text">
+                    <mat-icon matSuffix> map</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

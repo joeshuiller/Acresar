@@ -1,0 +1,30 @@
+.form {
+    width: 100%;
+}
+
+.images {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.images img {
+    width: 250px;
+}
+
+.listImg {
+    width: 250px;
+}
+
+table {
+    width: 100%;
+}
+
+.custom-cell {
+    text-align: center;
+    border-left: 1px solid #E0E0E0;
+    border-right: 1px solid #E0E0E0;
+    padding: 3px;
+}
