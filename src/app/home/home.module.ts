@@ -3,15 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-
+import { MenuModule } from './reinsurance-companies/menu/menu.module';
 
 @NgModule({
   declarations: [
     HomeComponent,
+    
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    MenuModule
   ]
 })
 export class HomeModule { }

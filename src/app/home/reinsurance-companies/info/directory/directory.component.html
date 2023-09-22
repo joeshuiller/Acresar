@@ -1,60 +1,64 @@
 <div class="main-content">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-header card-header-rose card-header-icon">
-              <div class="card-icon" style="background-color: #016672;">
-                <i class="material-icons">perm_contact_calendar</i>
-              </div>
-              <h4 class="card-title">Listado de Contactos</h4>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-rose card-header-icon">
+            <div class="card-icon" style="background-color: #016672;">
+              <i class="material-icons">perm_contact_calendar</i>
             </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <mat-form-field>
-                  <mat-label>Buscar...</mat-label>
-                  <input matInput (keyup)="applyFilter($event)" placeholder="Busca..." #input>
-                </mat-form-field>
-                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-                  <ng-container matColumnDef="codigo">
-                    <th mat-header-cell *matHeaderCellDef>Codigo</th>
-                    <td mat-cell *matCellDef="let element"> {{element.cod}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="Nombre">
-                    <th mat-header-cell *matHeaderCellDef>Nombre</th>
-                    <td mat-cell *matCellDef="let element"> {{element.r}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="Direccion">
-                    <th mat-header-cell *matHeaderCellDef >Dirección</th>
-                    <td mat-cell *matCellDef="let element" class="codigo-cell"> {{element.e}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="Telefono">
-                    <th mat-header-cell *matHeaderCellDef>Telefono</th>
-                    <td mat-cell *matCellDef="let element"> {{element.s}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="Pais">
-                    <th mat-header-cell *matHeaderCellDef>Pais</th>
-                    <td mat-cell *matCellDef="let element"> {{element.r2}} </td>
-                  </ng-container>
-                  <!-- accion Column -->
-                  <ng-container matColumnDef="Acción">
-                    <th mat-header-cell *matHeaderCellDef>Acciones</th>
-                    <td mat-cell *matCellDef="let element" ><mat-icon> border_color</mat-icon></td>
-                  </ng-container>
-                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                </table>
-                <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
-                  itemsPerPageLabel='cantidad de elementos' aria-label="Select page of periodic elements">
-                </mat-paginator>
-              </div>
-              <div class="col-12"> 
-                <button mat-raised-button type="submit" class="btn btn-fill btn-rose" style="background-color: #016672;"
-                  (click)="navigate('/home/companias/info/directorio/new-directory')">Nuevo Directorio</button>
-              </div>
+            <h4 class="card-title">Listado de Contactos</h4>
+          </div>
+          <!-- MENU -->
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <app-menu></app-menu>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <mat-form-field>
+                <mat-label>Buscar...</mat-label>
+                <input matInput (keyup)="applyFilter($event)" placeholder="Busca..." #input>
+              </mat-form-field>
+              <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                <ng-container matColumnDef="codigo">
+                  <th mat-header-cell *matHeaderCellDef>Codigo</th>
+                  <td mat-cell *matCellDef="let element"> {{element.cod}} </td>
+                </ng-container>
+                <ng-container matColumnDef="Nombre">
+                  <th mat-header-cell *matHeaderCellDef>Nombre</th>
+                  <td mat-cell *matCellDef="let element"> {{element.r}} </td>
+                </ng-container>
+                <ng-container matColumnDef="Direccion">
+                  <th mat-header-cell *matHeaderCellDef>Dirección</th>
+                  <td mat-cell *matCellDef="let element" class="codigo-cell"> {{element.e}} </td>
+                </ng-container>
+                <ng-container matColumnDef="Telefono">
+                  <th mat-header-cell *matHeaderCellDef>Telefono</th>
+                  <td mat-cell *matCellDef="let element"> {{element.s}} </td>
+                </ng-container>
+                <ng-container matColumnDef="Pais">
+                  <th mat-header-cell *matHeaderCellDef>Pais</th>
+                  <td mat-cell *matCellDef="let element"> {{element.r2}} </td>
+                </ng-container>
+                <!-- accion Column -->
+                <ng-container matColumnDef="Acción">
+                  <th mat-header-cell *matHeaderCellDef>Acciones</th>
+                  <td mat-cell *matCellDef="let element"><mat-icon> border_color</mat-icon></td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+              <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+                itemsPerPageLabel='cantidad de elementos' aria-label="Select page of periodic elements">
+              </mat-paginator>
+            </div>
+            <div class="col-12">
+              <button mat-raised-button type="submit" class="btn btn-fill btn-rose" style="background-color: #016672;"
+                (click)="navigate('/home/companias/info/directorio/new-directory')">Nuevo Directorio</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>

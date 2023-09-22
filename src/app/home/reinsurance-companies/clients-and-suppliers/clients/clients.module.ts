@@ -13,6 +13,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MenuModule } from '../../menu/menu.module';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatButtonModule
+    MatButtonModule,
+    MenuModule
   ]
 })
 export class ClientsModule { }

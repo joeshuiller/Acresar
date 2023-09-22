@@ -9,73 +9,14 @@
             </div>
             <h4 class="card-title">Listado</h4>
           </div>
-          <div class="col-12 text-center">
-            <ul class="nav">
-              <li class="nav-item">
-                <!-- Single link -->
-                <a (click)="navigate('home/companias/reinsurer')" class="nav-link" style="color: #006571;">
-                  <p>Reasegurador</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <!-- Single link -->
-                <a (click)="navigate('home/companias/corredor')" class="nav-link" style="color: #006571;">
-                  <p>Corredor</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <!-- Single link -->
-                <a (click)="navigate('home/companias/insurance-carrier')" class="nav-link" style="color: #006571;">
-                  <p>Aseguradora</p>
-                </a>
-              </li>
-          
-              <li class="nav-item">
-                <!-- Single link -->
-                <a (click)="navigate('home/companias/intermediary')" class="nav-link" style="color: #006571;">
-                  <p>Intermediario</p>
-                </a>
-              </li> 
-              <li class="nav-item">
-                <!-- Single link -->
-                <a (click)="navigate('home/companias/info/directorio')" class="nav-link" style="color: #006571;">
-                  <p>Info</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <!-- Single link -->
-                <a (click)="navigate('home/companias/clients')" class="nav-link" style="color: #006571;">
-                  <p>Clientes y Proveedores</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <!-- Single link -->
-                <a (click)="navigate('home/companias/reacoex')" class="nav-link" style="color: #006571;">
-                  <p>Reacoex</p>
-                </a>
-              </li>
-              </ul>
+          <div class="div">
+            
           </div>
-          <!-- <div class="card-body">
-            <div class="table-responsive">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Codigo</th>
-                    <th scope="col">Reasegurador</th>
-                    <th scope="col">Caloicasion</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let data of data">
-                    <td>{{data.cod}}</td>
-                    <td>{{data.e}}</td>
-                    <td>{{data.n}}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div> -->
+          <!-- MENU -->
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <app-menu></app-menu>
+          </div>
+          
           <div class="card-body">
             <div class="table-responsive">
               <mat-form-field>
@@ -107,14 +48,14 @@
                 <!-- accion Column -->
                 <ng-container matColumnDef="Acción">
                   <th mat-header-cell *matHeaderCellDef class="custom-cell">Acciones</th>
-                  <td mat-cell *matCellDef="let element" class="custom-cell"><mat-icon (click)="updateRecors(element)"> border_color</mat-icon></td>
+                  <td mat-cell *matCellDef="let element" class="custom-cell"><mat-icon (click)="updateRecors(element)">
+                      border_color</mat-icon></td>
                 </ng-container>
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
               </table>
               <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
-                itemsPerPageLabel = 'cantidad de elementos'
-                aria-label="Select page of periodic elements">
+                itemsPerPageLabel='cantidad de elementos' aria-label="Select page of periodic elements">
               </mat-paginator>
             </div>
           </div>

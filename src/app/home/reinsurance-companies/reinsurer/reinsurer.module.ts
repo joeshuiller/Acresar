@@ -14,6 +14,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { RegisterReinsurerComponent } from './register-reinsurer/register-reinsurer.component';
+import { MenuModule } from '../menu/menu.module';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { RegisterReinsurerComponent } from './register-reinsurer/register-reinsu
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatButtonModule
+    MatButtonModule,
+    MenuModule
   ]
 })
 export class ReinsurerModule { }

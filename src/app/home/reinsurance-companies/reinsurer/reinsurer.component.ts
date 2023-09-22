@@ -42,5 +42,7 @@ export class ReinsurerComponent implements OnInit {
       this.router.navigate(['/home/companias/reinsurer/register-reinsurer'])
     }
   }
-
+  navigate(item: any){
+    this.router.navigate([item])
+  }
 }

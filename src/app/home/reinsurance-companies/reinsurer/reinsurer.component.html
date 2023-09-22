@@ -9,6 +9,9 @@
             </div>
             <h4 class="card-title">Reseguradores</h4>
           </div>
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <app-menu></app-menu>
+          </div>
           <div class="card-body">
             <div class="table-responsive">
               <mat-form-field>
@@ -51,6 +54,13 @@
               </mat-paginator>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="col-12"> <!--BOTON-->
+        <div class="card">
+          <button mat-raised-button type="button" class="btn btn-fill btn-rose"
+          style="background-color: #016672; margin: 25px;" (click)="navigate('/home/companias/insurance-carrier/create-insurer')"
+          >Nueva Compañia</button> 
         </div>
       </div>
     </div>
