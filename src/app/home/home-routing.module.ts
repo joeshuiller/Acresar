@@ -33,7 +33,10 @@ const routes: Routes = [
   {path: 'companias/intermediary', loadChildren:() => import('./reinsurance-companies/intermediary/intermediary.module').then(m=>m.IntermediaryModule)},
   {path: 'companias/info/directorio', loadChildren:()=>import('./reinsurance-companies/info/directory/directory.module').then(m => m.DirectoryModule)},
   {path: 'companias/clients', loadChildren:() => import('./reinsurance-companies/clients-and-suppliers/clients/clients.module').then(m => m.ClientsModule)},
-  {path: 'companias/reacoex', loadChildren:() => import ('./reinsurance-companies/reacodex/reacodex.module').then(m => m.ReacodexModule)}
+  {path: 'companias/reacoex', loadChildren:() => import ('./reinsurance-companies/reacodex/reacodex.module').then(m => m.ReacodexModule)},
+
+  /*CONTRATOS*/
+  {path: 'contracts/Facultativos', loadChildren:() => import ('./contracts/facultativos/facultativos.module').then(m => m.FacultativosModule)}
 ];
 
 

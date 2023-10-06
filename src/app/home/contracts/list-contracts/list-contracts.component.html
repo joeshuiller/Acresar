@@ -9,6 +9,60 @@
             </div>
             <h4 class="card-title">Listado</h4>
           </div>
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <app-menu></app-menu>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <mat-form-field>
+                <mat-label>Buscar...</mat-label>
+                <input matInput (keyup)="applyFilter($event)" placeholder="Busca..." #input>
+              </mat-form-field>
+              <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                <ng-container matColumnDef="contrato">
+                  <th mat-header-cell *matHeaderCellDef class="custom-cell"> Contratos </th>
+                  <td mat-cell *matCellDef="let element" class="custom-cell"> {{element.o}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="nombre">
+                  <th mat-header-cell *matHeaderCellDef class="custom-cell">Nombre</th>
+                  <td mat-cell *matCellDef="let element" class="custom-cell"> {{element.c}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="fechaInicio">
+                  <th mat-header-cell *matHeaderCellDef class="custom-cell">Fecha <br> inicio</th>
+                  <td mat-cell *matCellDef="let element" class="custom-cell"> {{element.r}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="fechaTermino">
+                  <th mat-header-cell *matHeaderCellDef class="custom-cell">Fecha <br> termino</th>
+                  <td mat-cell *matCellDef="let element" class="custom-cell"> {{element.e}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="moneda">
+                  <th mat-header-cell *matHeaderCellDef class="custom-cell">Moneda</th>
+                  <td mat-cell *matCellDef="let element" class="custom-cell"> {{element.mc}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="tipoContrato">
+                  <th mat-header-cell *matHeaderCellDef class="custom-cell">Tipo Contrato</th>
+                  <td mat-cell *matCellDef="let element" class="custom-cell"> {{element.cc}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="fechaCreacion">
+                  <th mat-header-cell *matHeaderCellDef class="custom-cell">Fecha <br> Creacion</th>
+                  <td mat-cell *matCellDef="let element" class="custom-cell"> {{element.fc}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+
+              <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+                itemsPerPageLabel='cantidad de elementos' aria-label="Select page of periodic elements">
+              </mat-paginator>
+            </div>
+          </div>
         </div>
       </div>
     </div>

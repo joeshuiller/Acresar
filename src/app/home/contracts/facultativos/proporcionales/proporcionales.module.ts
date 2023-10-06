@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ListContractsRoutingModule } from './list-contracts-routing.module';
-import { ListContractsComponent } from './list-contracts.component';
-import { CompanyListRoutingModule } from '../../reinsurance-companies/company-list/company-list-routing.module';
+import { ProporcionalesRoutingModule } from './proporcionales-routing.module';
+import { ProporcionalesComponent } from './proporcionales.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatRadioModule } from '@angular/material/radio';
@@ -12,17 +11,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatButtonModule } from '@angular/material/button';
 import { MatNativeDateModule } from '@angular/material/core';
-import { MenuModule } from '../menu/menu.module';
+import { MatButtonModule } from '@angular/material/button';
+import { MenuModule } from '../../menu/menu.module';
 
 
 @NgModule({
-  declarations: [ListContractsComponent],
+  declarations: [ProporcionalesComponent],
   imports: [
     CommonModule,
-    ListContractsRoutingModule,
-    CompanyListRoutingModule,
+    ProporcionalesRoutingModule,
     MatTableModule,
     MatPaginatorModule,
     MatRadioModule,
@@ -37,4 +35,4 @@ import { MenuModule } from '../menu/menu.module';
     MenuModule
   ]
 })
-export class ListContractsModule { }
+export class ProporcionalesModule { }
