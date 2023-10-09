@@ -219,4 +219,7 @@ export class AuthService {
   getCorredoresList(){
     return this.registeresquest.GETER(RoutersLink.getCorredoresList)
   }
+  getAsociacionList(){
+    return this.registeresquest.GETER(RoutersLink.getAsociacionList)
+  }
 }

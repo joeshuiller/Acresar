@@ -42,7 +42,8 @@ export const RoutersLink = {
     getClientes: "/clientes/0",
     getPaises: "/pais",
     getReacoex: "/reaseguradoras/list/reacoex",
-    getCorredoresList: "/corredores/list/reacoex"
+    getCorredoresList: "/corredores/list/reacoex",
+    getAsociacionList: "/asociaciondecontratos"
 };
 
 export const Menssage = {

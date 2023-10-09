@@ -36,7 +36,11 @@ const routes: Routes = [
   {path: 'companias/reacoex', loadChildren:() => import ('./reinsurance-companies/reacodex/reacodex.module').then(m => m.ReacodexModule)},
 
   /*CONTRATOS*/
-  {path: 'contracts/Facultativos', loadChildren:() => import ('./contracts/facultativos/facultativos.module').then(m => m.FacultativosModule)}
+  {path: 'contracts/Facultativos', loadChildren:() => import ('./contracts/facultativos/facultativos.module').then(m => m.FacultativosModule)},
+
+  /**Asociacion de colombia */
+  {path: 'asociacion/contratos', loadChildren:() => import ('./contract-association/contracs/contracs.module').then(m => m.ContracsModule)},
+  {path: 'asociacion/ramos', loadChildren:() => import ('./contract-association/ramos/ramos.module').then(m => m.RamosModule)}
 ];
 
 

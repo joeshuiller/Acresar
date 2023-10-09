@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FacultativosRoutingModule } from './facultativos-routing.module';
 import { ProporcionalesComponent } from './proporcionales/proporcionales.component';
 import { FacultativosComponent } from './facultativos.component';
+import { MenuModule } from '../menu/menu.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { FacultativosComponent } from './facultativos.component';
   ],
   imports: [
     CommonModule,
-    FacultativosRoutingModule
+    FacultativosRoutingModule,
+    MenuModule
   ]
 })
 export class FacultativosModule { }
