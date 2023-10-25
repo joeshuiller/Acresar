@@ -33,6 +33,13 @@ export class PrimasComponent implements OnInit {
       poliza: [Menssage.empty, Validators.compose([Validators.required])],
       certificado: [Menssage.empty, Validators.compose([Validators.required])],
       emision: [Menssage.empty, Validators.compose([Validators.required])],
+      moneda: [Menssage.empty, Validators.compose([Validators.required])],
+      inicio: [Menssage.empty, Validators.compose([Validators.required])],
+      fin: [Menssage.empty, Validators.compose([Validators.required])],
+      sumaAsegurada: [Menssage.empty, Validators.compose([Validators.required])],
+      sumaDistribuida: [Menssage.empty, Validators.compose([Validators.required])],
+      prima: [Menssage.empty, Validators.compose([Validators.required])],
+      primaDistribuicion: [Menssage.empty, Validators.compose([Validators.required])],
     })
 
   }

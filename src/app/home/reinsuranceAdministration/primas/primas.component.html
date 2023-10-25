@@ -15,7 +15,7 @@
                 <div class="col-12"> <!--Name-->
                   <mat-form-field appearance="fill">
                     <mat-label>Ramos</mat-label>
-                    <input matInput placeholder="ingresa los nombres" formControlName="ramos" type="text">
+                    <input matInput placeholder="ingresa el ramo" formControlName="ramos" type="text">
                     <mat-icon matSuffix>poll</mat-icon>
                     <mat-hint>este campo es obligatorio *</mat-hint>
                   </mat-form-field>
@@ -23,7 +23,7 @@
                 <div class="col-6"> <!--id-->
                   <mat-form-field appearance="fill">
                     <mat-label>Id de Contrato</mat-label>
-                    <input matInput placeholder="ingresa los nombres" formControlName="id" type="text">
+                    <input matInput placeholder="ingresa el id de contratos" formControlName="id" type="text">
                     <mat-icon matSuffix>location_city</mat-icon>
                     <mat-hint>este campo es obligatorio *</mat-hint>
                   </mat-form-field>
@@ -31,48 +31,104 @@
                 <div class="col-6"> <!--id-->
                   <mat-form-field appearance="fill">
                     <mat-label>descripcion de Contrato</mat-label>
-                    <input matInput placeholder="ingresa los nombres" formControlName="description" type="text">
-                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <input matInput placeholder="ingresa la descripción" formControlName="description" type="text">
+                    <mat-icon matSuffix>assignment</mat-icon>
                     <mat-hint>este campo es obligatorio *</mat-hint>
                   </mat-form-field>
                 </div>
                 <div class="col-6"> <!--id-->
                   <mat-form-field appearance="fill">
                     <mat-label>Ramo Tecnico</mat-label>
-                    <input matInput placeholder="ingresa los nombres" formControlName="ramoTecnico" type="text">
-                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <input matInput placeholder="ingresa el ramo tecnico" formControlName="ramoTecnico" type="text">
+                    <mat-icon matSuffix>book</mat-icon>
                     <mat-hint>este campo es obligatorio *</mat-hint>
                   </mat-form-field>
                 </div>
                 <div class="col-6"> <!--id-->
                   <mat-form-field appearance="fill">
                     <mat-label>Subramo / Producto</mat-label>
-                    <input matInput placeholder="ingresa los nombres" formControlName="subramosProduct" type="text">
-                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <input matInput placeholder="ingresa el subramo o producto" formControlName="subramosProduct" type="text">
+                    <mat-icon matSuffix>class</mat-icon>
                     <mat-hint>este campo es obligatorio *</mat-hint>
                   </mat-form-field>
                 </div>
                 <div class="col-4"> <!--id-->
                   <mat-form-field appearance="fill">
                     <mat-label>Poliza</mat-label>
-                    <input matInput placeholder="ingresa los nombres" formControlName="poliza" type="text">
-                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <input matInput placeholder="ingresa la poliza" formControlName="poliza" type="text">
+                    <mat-icon matSuffix>polymer</mat-icon>
                     <mat-hint>este campo es obligatorio *</mat-hint>
                   </mat-form-field>
                 </div>
                 <div class="col-4"> <!--id-->
                   <mat-form-field appearance="fill">
                     <mat-label>Certificado / Endoso</mat-label>
-                    <input matInput placeholder="ingresa los nombres" formControlName="certificado" type="text">
-                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <input matInput placeholder="ingresa el certificado" formControlName="certificado" type="text">
+                    <mat-icon matSuffix>done</mat-icon>
                     <mat-hint>este campo es obligatorio *</mat-hint>
                   </mat-form-field>
                 </div>
                 <div class="col-4"> <!--id-->
                   <mat-form-field appearance="fill">
                     <mat-label>Fecha Emision</mat-label>
-                    <input matInput placeholder="ingresa los nombres" formControlName="emision" type="text">
+                    <input matInput placeholder="ingresa la Fecha Emision" formControlName="emision" type="text">
+                    <mat-icon matSuffix>calendar_today</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-6"> <!--id-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Moneda</mat-label>
+                    <input matInput placeholder="ingresa la Moneda" formControlName="moneda" type="text">
+                    <mat-icon matSuffix>attach_money</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-3"> <!--id-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Inicio</mat-label>
+                    <input matInput placeholder="inicio" formControlName="inicio" type="text">
+                    <mat-icon matSuffix>call_made</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-3"> <!--id-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Fin</mat-label>
+                    <input matInput placeholder="Fin" formControlName="fin" type="text">
+                    <mat-icon matSuffix>call_received</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-3"> <!--id-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Suma asegurada</mat-label>
+                    <input matInput placeholder="ingresa la suma asegurada" formControlName="sumaAsegurada" type="text">
                     <mat-icon matSuffix>person_outline</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-3"> <!--id-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Suma asegurada por distribuir</mat-label>
+                    <input matInput placeholder="suma por distribuir" formControlName="sumaDistribuida" type="text">
+                    <mat-icon matSuffix>equalizer</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-3"> <!--id-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Prima</mat-label>
+                    <input matInput placeholder="prima" formControlName="prima" type="text">
+                    <mat-icon matSuffix>widgets</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-3"> <!--id-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Prima por Distribucion</mat-label>
+                    <input matInput placeholder="prima por distribuición" formControlName="primaDistribuicion" type="text">
+                    <mat-icon matSuffix>widgets</mat-icon>
                     <mat-hint>este campo es obligatorio *</mat-hint>
                   </mat-form-field>
                 </div>
