@@ -43,7 +43,8 @@ export const RoutersLink = {
     getPaises: "/pais",
     getReacoex: "/reaseguradoras/list/reacoex",
     getCorredoresList: "/corredores/list/reacoex",
-    getAsociacionList: "/asociaciondecontratos"
+    getAsociacionList: "/asociaciondecontratos",
+    getRamos: "/ramos"
 };
 
 export const Menssage = {

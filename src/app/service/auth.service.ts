@@ -222,4 +222,7 @@ export class AuthService {
   getAsociacionList(){
     return this.registeresquest.GETER(RoutersLink.getAsociacionList)
   }
+  getRamos(){
+    return this.registeresquest.GETER(RoutersLink.getRamos)
+  }
 }

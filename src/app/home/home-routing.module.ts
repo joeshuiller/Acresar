@@ -23,8 +23,9 @@ const routes: Routes = [
   { path: 'content', loadChildren: () => import('./content/content.module').then(m => m.ContentModule) },
   { path: 'uploadImages', loadChildren: () => import('./upload-images/upload-images.module').then(m => m.UploadImagesModule) },
   { path: 'report', loadChildren: () => import('./report/report.module').then(m => m.ReportModule) },
-  {path: 'companias', loadChildren: ()=> import ('./reinsurance-companies/company-list/company-list.module').then(m => m.CompanyListModule)},
+  
   /*ANDRES */
+  {path: 'companias', loadChildren: ()=> import ('./reinsurance-companies/company-list/company-list.module').then(m => m.CompanyListModule)},
   {path: 'companias/upload', loadChildren: ()=>import ('./reinsurance-companies/reinsurance-upload/reinsurance-upload.module').then(m => m.ReinsuranceUploadModule)},
   {path: 'contracts', loadChildren: () => import('./contracts/list-contracts/list-contracts.module').then(m=>m.ListContractsModule)},
   {path: 'companias/reinsurer', loadChildren: ()=> import('./reinsurance-companies/reinsurer/reinsurer.module').then(m => m.ReinsurerModule)},
@@ -40,7 +41,10 @@ const routes: Routes = [
 
   /**Asociacion de colombia */
   {path: 'asociacion/contratos', loadChildren:() => import ('./contract-association/contracs/contracs.module').then(m => m.ContracsModule)},
-  {path: 'asociacion/ramos', loadChildren:() => import ('./contract-association/ramos/ramos.module').then(m => m.RamosModule)}
+  {path: 'asociacion/ramos', loadChildren:() => import ('./contract-association/ramos/ramos.module').then(m => m.RamosModule)},
+  {path: 'asociacion/asociacion-contratos', loadChildren: () => import ('./contract-association/contract-association-contract-form/contract-association-contract-form.module').then(m => m.ContractAssociationContractFormModule)},
+  {path: 'reinsuranceAdministration/primas', loadChildren: () => import ('./reinsuranceAdministration/primas/primas.module').then(m => m.PrimasModule)}
+
 ];
 
 

@@ -1,0 +1,92 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-rose card-header-icon">
+            <div class="card-icon" style="background-color: #016672;">
+              <i class="material-icons">storage</i>
+            </div>
+            <h4 class="card-title">Listado</h4>
+          </div>
+          <div class="card-body">
+            <form class="form" [formGroup]="form" (ngSubmit)="sendForm(form.value)">
+              <div class="row">
+                <div class="col-12"> <!--Name-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Ramos</mat-label>
+                    <input matInput placeholder="ingresa los nombres" formControlName="ramos" type="text">
+                    <mat-icon matSuffix>poll</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-6"> <!--id-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Id de Contrato</mat-label>
+                    <input matInput placeholder="ingresa los nombres" formControlName="id" type="text">
+                    <mat-icon matSuffix>location_city</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-6"> <!--id-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>descripcion de Contrato</mat-label>
+                    <input matInput placeholder="ingresa los nombres" formControlName="description" type="text">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-6"> <!--id-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Ramo Tecnico</mat-label>
+                    <input matInput placeholder="ingresa los nombres" formControlName="ramoTecnico" type="text">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-6"> <!--id-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Subramo / Producto</mat-label>
+                    <input matInput placeholder="ingresa los nombres" formControlName="subramosProduct" type="text">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--id-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Poliza</mat-label>
+                    <input matInput placeholder="ingresa los nombres" formControlName="poliza" type="text">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--id-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Certificado / Endoso</mat-label>
+                    <input matInput placeholder="ingresa los nombres" formControlName="certificado" type="text">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-4"> <!--id-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Fecha Emision</mat-label>
+                    <input matInput placeholder="ingresa los nombres" formControlName="emision" type="text">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                <div class="col-12"> <!--BOTON-->
+                  <button mat-raised-button type="submit" class="btn btn-fill btn-rose" [disabled]="form.invalid"
+                    style="background-color: #016672;">Agregar </button>
+                  <button mat-raised-button type="button" class="btn btn-fill btn-rose" (click)="clearForm()"
+                    style="background-color: #016672; margin-left: 10px;">Cancelar </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -14,6 +14,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { RamosComponent } from './ramos.component';
+import { MenuModule } from '../menu/menu.module';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { RamosComponent } from './ramos.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MenuModule
   ]
 })
 export class RamosModule { }

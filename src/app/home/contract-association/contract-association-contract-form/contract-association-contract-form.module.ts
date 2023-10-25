@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ContracsRoutingModule } from './contracs-routing.module';
-import { ContracsComponent } from './contracs.component';
+import { ContractAssociationContractFormRoutingModule } from './contract-association-contract-form-routing.module';
+import { ContractAssociationContractFormComponent } from './contract-association-contract-form.component';
+import { MenuModule } from '../menu/menu.module';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatRadioModule } from '@angular/material/radio';
@@ -13,14 +14,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MenuModule } from '../menu/menu.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
-  declarations: [ContracsComponent],
+  declarations: [ContractAssociationContractFormComponent],
   imports: [
     CommonModule,
-    ContracsRoutingModule,
+    ContractAssociationContractFormRoutingModule,
     MatTableModule,
     MatPaginatorModule,
     MatRadioModule,
@@ -32,7 +33,9 @@ import { MenuModule } from '../menu/menu.module';
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
     MenuModule
   ]
 })
-export class ContracsModule { }
+export class ContractAssociationContractFormModule { }
