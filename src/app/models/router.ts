@@ -44,7 +44,8 @@ export const RoutersLink = {
     getReacoex: "/reaseguradoras/list/reacoex",
     getCorredoresList: "/corredores/list/reacoex",
     getAsociacionList: "/asociaciondecontratos",
-    getRamos: "/ramos"
+    getRamos: "/ramos",
+    getPrimas: "/aseguradoras/facultativo/reportenomina/get"
 };
 
 export const Menssage = {

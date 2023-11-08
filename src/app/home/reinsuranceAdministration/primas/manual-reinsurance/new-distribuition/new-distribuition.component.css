@@ -1,0 +1,11 @@
+table {
+    width: 100%;
+}
+
+
+.centered-cell {
+    text-align: center;
+}
+.centered-header{
+    text-align: center;
+}

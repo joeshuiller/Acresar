@@ -198,6 +198,9 @@ export class AuthService {
   getAseguradoras(){
     return this.registeresquest.GETER(RoutersLink.getAseguradoras)
   }
+  getPrima(){
+    return this.registeresquest.GETER(RoutersLink.getPrimas)
+  }
   getIntermediarios(){
     return this.registeresquest.GETER(RoutersLink.getIntermediarios)
   }
