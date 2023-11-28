@@ -34,10 +34,12 @@ export class FacultativosEspecialComponent implements OnInit {
   }
   public dataSource: MatTableDataSource<any>
   public dataSourceTwo: MatTableDataSource<any>
+  public dataSourceTree: MatTableDataSource<any>
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   displayedColumns: string[] = ['codRamo', 'ramos', 'sumaLimite', 'primaReaseguradora', 'cesion'];
   displayedColumnsTwo: string[] = ['contrato', 'tramo', 'sumaRetenida', 'sumaCedida', 'primaRetenida', 'primaCedida'];
+  displayedColumnsTree: string[] = ['corredor', 'reasegurador', 'sumaCedida', 'primaCedida','comision','depositosRetenidos','impCedida','brokerage','valorPagar'];
   myYears: NewType[] = [
     {value: '2019', viewValue: '2019'},
     {value: '2020', viewValue: '2020'},

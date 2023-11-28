@@ -228,4 +228,10 @@ export class AuthService {
   getRamos(){
     return this.registeresquest.GETER(RoutersLink.getRamos)
   }
+  delete(id: any){
+    return this.registeresquest.DELETED(RoutersLink.deleted + id)
+  }
+  getDtaForm(id: any){
+    return this.registeresquest.GETER(RoutersLink.getDtaForm + id + '/edit')
+  }
 }

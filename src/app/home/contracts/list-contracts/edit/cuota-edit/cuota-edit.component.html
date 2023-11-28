@@ -1,0 +1,68 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-rose card-header-icon">
+            <div class="card-icon" style="background-color: #016672;">
+              <i class="material-icons">storage</i>
+            </div>
+            <h4 class="card-title">Cuota parte edit {{cuota}}</h4>
+          </div>
+
+
+          <div class="card-body">
+            <form class="form mb-4" [formGroup]="form">
+              <div class="row">
+                <div class="col-3"> <!--Name-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Codigo contrato</mat-label>
+                    <input matInput placeholder="ingresa el ramo" formControlName="codigoContrato" type="text">
+                    <mat-icon matSuffix>poll</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+
+                <div class="col-6"> <!--Name-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Descripcion</mat-label>
+                    <input matInput placeholder="ingresa el ramo" formControlName="descripcion" type="text">
+                    <mat-icon matSuffix>poll</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+
+                <div class="col-3"> <!--Name-->
+                  <mat-form-field appearance="fill">
+                    <mat-label>EPI</mat-label>
+                    <input matInput placeholder="ingresa el ramo" formControlName="epiContrato" type="text">
+                    <mat-icon matSuffix>poll</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+
+                <div class="col-3">
+                  <mat-form-field appearance="fill">
+                    <input matInput placeholder="ingresa el ramo" [value]="fecha1String" formControlName="dateOne" type="text">
+                    <mat-icon matSuffix>poll</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+
+                <div class="col-3">
+                  <mat-form-field appearance="fill">
+                    <input matInput placeholder="ingresa el ramo" [value]="fecha2" formControlName="dateTwo" type="text">
+                    <mat-icon matSuffix>poll</mat-icon>
+                    <mat-hint>este campo es obligatorio *</mat-hint>
+                  </mat-form-field>
+                </div>
+                
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

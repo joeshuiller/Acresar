@@ -45,7 +45,9 @@ export const RoutersLink = {
     getCorredoresList: "/corredores/list/reacoex",
     getAsociacionList: "/asociaciondecontratos",
     getRamos: "/ramos",
-    getPrimas: "/aseguradoras/facultativo/reportenomina/get"
+    getPrimas: "/aseguradoras/facultativo/reportenomina/get",
+    deleted: '/contratos/automaticos/proporcionales/cuotaparte/',
+    getDtaForm: '/contratos/automaticos/proporcionales/cuotaparte/'
 };
 
 export const Menssage = {

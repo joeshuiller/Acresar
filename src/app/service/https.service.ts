@@ -20,4 +20,6 @@ export class HttpsService {
 
     GETER = async (sub: string) => await this.http.get<any>(this.api2 + sub).toPromise();
     POSTS = async (sub: string, obj: any) => await this.http.post<any>(this.api2 + sub, obj).toPromise();
+    DELETED = async(sub: string) => await this.http.delete<any>(this.api2 + sub).toPromise();
+
 }
