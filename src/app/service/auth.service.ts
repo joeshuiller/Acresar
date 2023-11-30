@@ -234,4 +234,7 @@ export class AuthService {
   getDtaForm(id: any){
     return this.registeresquest.GETER(RoutersLink.getDtaForm + id + '/edit')
   }
+  getCurrency(){
+    return this.registeresquest.GETER(RoutersLink.getCurrency)
+  }
 }

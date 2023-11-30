@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-list-contracts',
@@ -62,7 +63,17 @@ export class ListContractsComponent implements OnInit {
   }
   //Metodo para borrar
   delete(id: any) {
-    this.authService.delete(id)
+    Swal.fire({
+      title: "Deseas eliminar este registro?",
+      text: "¡No podrás revertir esto!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.authService.delete(id)
       .then(res => {
         console.log('Éxito al eliminar', res);
         this.data = this.data.filter(item => item.id !== id);
@@ -72,6 +83,16 @@ export class ListContractsComponent implements OnInit {
       .catch(error => {
         console.error('Error al eliminar', error);
       });
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success"
+          
+        });
+      }
+    });
+    
+    
   }
 
 }

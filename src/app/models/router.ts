@@ -47,7 +47,8 @@ export const RoutersLink = {
     getRamos: "/ramos",
     getPrimas: "/aseguradoras/facultativo/reportenomina/get",
     deleted: '/contratos/automaticos/proporcionales/cuotaparte/',
-    getDtaForm: '/contratos/automaticos/proporcionales/cuotaparte/'
+    getDtaForm: '/contratos/automaticos/proporcionales/cuotaparte/',
+    getCurrency: '/monedas'
 };
 
 export const Menssage = {
