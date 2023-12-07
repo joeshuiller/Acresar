@@ -37,22 +37,12 @@ export class LoginComponent implements OnInit, OnDestroy {
           this.localStore.setItem("reload", "reload")
           window.location.reload()
         }
-        this.activatedRoute.paramMap.subscribe((parametros: ParamMap) => {
-            let token = parametros.get("token");
-            console.log(token)
-            // if (token != null) {
-            //   console.log(token)
-            //   this.getCustomerDetail(token)
-            // } else {
-            //   let token = "ErLCUZBtopFI7hfx4ShACW8OROgHhL2h6eh4RVKQas02QaMn5w";
-            //   this.getCustomerDetail(token)
-            // }
-        })
+        
     }
 
     ngOnInit() {
       //this.alert.loading();
-      particlesJS.load('particles-js', '../assets/particle.json', null);
+      particlesJS.load('particles-js', 'https://systemresolution.com/New/assets/particle.json', null);
         var navbar : HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggle')[0];
         const body = document.getElementsByTagName('body')[0];

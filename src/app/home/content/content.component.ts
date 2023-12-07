@@ -175,12 +175,7 @@ export class ContentComponent implements OnInit {
       this.usersData = this.localStore.getSuccessLogin();
       this.customerDetail = this.localStore.getItem(Menssage.customerDetail)
       var data =  this.localStore.getItem(Menssage.menu)
-      this.menuItemsStore = data == null ? []: data
-      if (this.menuItemsStore.length == 0) {
-          this.getMenu(this.usersData.user.idrol);
-      }else{
-          this.menuItems = this.menuItemsStore.filter(menuItem => menuItem);
-      }
+      
     }
 
   ngOnInit(): void {
